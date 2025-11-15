@@ -1,0 +1,213 @@
+{
+    "css": {
+        "id-style-1": {
+            "fileName": "styles",
+            "rules": [
+                {
+                    "selector": "body",
+                    "properties": {
+                        "font-family": "Arial, sans-serif",
+                        "background-color": "#f0f0f0",
+                        "margin": "0",
+                        "padding": "20px"
+                    }
+                },
+                {
+                    "selector": "#buttonEl",
+                    "properties": {
+                        "padding": "10px 20px",
+                        "font-size": "16px",
+                        "cursor": "pointer",
+                        "border": "none",
+                        "border-radius": "5px",
+                        "background-color": "#ffffff",
+                        "box-shadow": "0 2px 5px rgba(0, 0, 0, 0.1)"
+                    }
+                },
+                {
+                    "selector": "#container",
+                    "properties": {
+                        "text-align": "center",
+                        "margin-top": "50px"
+                    }
+                },
+                {
+                    "selector": "button:hover",
+                    "properties": {
+                        "background-color": "#e0e0e0"
+                    }
+                }
+            ]
+        }
+    },
+    "js": {
+        "id-script-1": {
+            "fileName": "script",
+            "statements": [
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "const",
+                    "variableName": "buttonEl",
+                    "value": {
+                        "type": "functionCall",
+                        "functionName": {
+                            "type": "propertyAccess",
+                            "object": {
+                                "type": "literal",
+                                "value": "document"
+                            },
+                            "property": "getElementById"
+                        },
+                        "arguments": [
+                            {
+                                "type": "literal",
+                                "value": "\"buttonEl\""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "let",
+                    "variableName": "clickCount",
+                    "value": {
+                        "type": "literal",
+                        "value": "0"
+                    }
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "buttonClick",
+                    "parameters": [
+                        "e"
+                    ],
+                    "bodyStatements": [
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "console"
+                                    },
+                                    "property": "log"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "\"clicked on button: \""
+                                    },
+                                    {
+                                        "type": "literal",
+                                        "value": "e"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "console"
+                                    },
+                                    "property": "log"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "\"Click count: \""
+                                    },
+                                    {
+                                        "type": "literal",
+                                        "value": "clickCount"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "buttonEl"
+                                    },
+                                    "property": "innerText"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "`Clicked ${clickCount} times`"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "expressionStatement",
+                    "expression": {
+                        "type": "functionCall",
+                        "functionName": {
+                            "type": "propertyAccess",
+                            "object": {
+                                "type": "literal",
+                                "value": "buttonEl"
+                            },
+                            "property": "addEventListener"
+                        },
+                        "arguments": [
+                            {
+                                "type": "literal",
+                                "value": "\"click\""
+                            },
+                            {
+                                "type": "literal",
+                                "value": "buttonClick"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "html": {
+        "id-html-1": {
+            "fileName": "index",
+            "elements": {
+                "id-1": {
+                    "tagName": "div",
+                    "attributes": {
+                        "id": "container"
+                    },
+                    "children": [
+                        "id-2"
+                    ]
+                },
+                "id-2": {
+                    "tagName": "button",
+                    "attributes": {
+                        "id": "buttonEl"
+                    },
+                    "children": []
+                },
+                "id-3": {}
+            },
+            "cssFiles": [
+                "id-style-1"
+            ],
+            "jsFiles": [
+                "id-script-1"
+            ]
+        }
+    },
+    "htmlRootId": "id-html-1",
+    "outputDirectory": "SampleOutput1"
+}
