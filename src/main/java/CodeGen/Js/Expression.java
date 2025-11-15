@@ -1,4 +1,4 @@
-package CodeGeneration.src.main.java.CodeGen.Js;
+package CodeGen.Js;
 
 public interface Expression extends JsRenderable {
     default Expression dot(String property) {

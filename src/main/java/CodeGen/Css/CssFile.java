@@ -1,10 +1,10 @@
-package CodeGeneration.src.main.java.CodeGen.Css;
+package CodeGen.Css;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import CodeGeneration.src.main.java.CodeGen.Environment;
-import CodeGeneration.src.main.java.CodeGen.Common.CodeGenFile;
+import CodeGen.Environment;
+import CodeGen.Common.CodeGenFile;
 
 public class CssFile extends CodeGenFile {
 

@@ -1,20 +1,18 @@
-package CodeGeneration.src.main.java;
-
-import CodeGeneration.src.main.java.CodeGen.Common.FileCreator;
-import CodeGeneration.src.main.java.CodeGen.Css.CssFile;
-import CodeGeneration.src.main.java.CodeGen.Css.CssRule;
-import CodeGeneration.src.main.java.CodeGen.Html.HtmlElement;
-import CodeGeneration.src.main.java.CodeGen.Html.HtmlFile;
-import CodeGeneration.src.main.java.CodeGen.Js.Expression;
-import CodeGeneration.src.main.java.CodeGen.Js.ExpressionStatement;
-import CodeGeneration.src.main.java.CodeGen.Js.Function;
-import CodeGeneration.src.main.java.CodeGen.Js.FunctionCallExpression;
-import CodeGeneration.src.main.java.CodeGen.Js.LiteralExpression;
-import CodeGeneration.src.main.java.CodeGen.Js.OperationExpression;
-import CodeGeneration.src.main.java.CodeGen.Js.Parameter;
-import CodeGeneration.src.main.java.CodeGen.Js.PropertyAccessExpression;
-import CodeGeneration.src.main.java.CodeGen.Js.ScriptFile;
-import CodeGeneration.src.main.java.CodeGen.Js.Variable;
+import CodeGen.Common.FileCreator;
+import CodeGen.Css.CssFile;
+import CodeGen.Css.CssRule;
+import CodeGen.Html.HtmlElement;
+import CodeGen.Html.HtmlFile;
+import CodeGen.Js.Expression;
+import CodeGen.Js.ExpressionStatement;
+import CodeGen.Js.Function;
+import CodeGen.Js.FunctionCallExpression;
+import CodeGen.Js.LiteralExpression;
+import CodeGen.Js.OperationExpression;
+import CodeGen.Js.Parameter;
+import CodeGen.Js.PropertyAccessExpression;
+import CodeGen.Js.ScriptFile;
+import CodeGen.Js.Variable;
 
 public class Main {
     

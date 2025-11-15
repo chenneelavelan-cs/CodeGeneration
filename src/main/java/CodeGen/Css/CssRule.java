@@ -1,10 +1,10 @@
-package CodeGeneration.src.main.java.CodeGen.Css;
+package CodeGen.Css;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import CodeGeneration.src.main.java.CodeGen.Environment;
-import CodeGeneration.src.main.java.CodeGen.Common.Utils;
+import CodeGen.Environment;
+import CodeGen.Common.Utils;
 
 public class CssRule {
     

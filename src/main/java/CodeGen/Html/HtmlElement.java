@@ -1,12 +1,12 @@
-package CodeGeneration.src.main.java.CodeGen.Html;
+package CodeGen.Html;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import CodeGeneration.src.main.java.CodeGen.Environment;
-import CodeGeneration.src.main.java.CodeGen.Common.Utils;
+import CodeGen.Environment;
+import CodeGen.Common.Utils;
 
 public class HtmlElement {
     

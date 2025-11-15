@@ -1,4 +1,4 @@
-package CodeGeneration.src.main.java.CodeGen.Common;
+package CodeGen.Common;
 
 public abstract class CodeGenFile {
     

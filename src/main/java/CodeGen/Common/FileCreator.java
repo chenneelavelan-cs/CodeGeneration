@@ -1,9 +1,9 @@
-package CodeGeneration.src.main.java.CodeGen.Common;
+package CodeGen.Common;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import CodeGeneration.src.main.java.CodeGen.Environment;
+import CodeGen.Environment;
 
 public class FileCreator {
 

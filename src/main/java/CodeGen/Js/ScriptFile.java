@@ -1,10 +1,10 @@
-package CodeGeneration.src.main.java.CodeGen.Js;
+package CodeGen.Js;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import CodeGeneration.src.main.java.CodeGen.Environment;
-import CodeGeneration.src.main.java.CodeGen.Common.CodeGenFile;
+import CodeGen.Environment;
+import CodeGen.Common.CodeGenFile;
 
 public class ScriptFile extends CodeGenFile {
     
@@ -34,7 +34,7 @@ public class ScriptFile extends CodeGenFile {
         StringBuilder sb = new StringBuilder();
         for (JsRenderable statement : statements) {
             sb.append(statement.renderJsContent(0)).append("\n");
-            if (statement != statements.getLast()) { // add new line between statements
+            if (statement != statements.get(statements.size() - 1)) { // add new line between statements
                 sb.append("\n");
             }
         }

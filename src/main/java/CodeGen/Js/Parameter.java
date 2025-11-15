@@ -1,4 +1,4 @@
-package CodeGeneration.src.main.java.CodeGen.Js;
+package CodeGen.Js;
 
 public class Parameter implements JsRenderable {
     private String name;

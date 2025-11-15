@@ -1,12 +1,12 @@
-package CodeGeneration.src.main.java.CodeGen.Html;
+package CodeGen.Html;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import CodeGeneration.src.main.java.CodeGen.Environment;
-import CodeGeneration.src.main.java.CodeGen.Common.CodeGenFile;
-import CodeGeneration.src.main.java.CodeGen.Css.CssFile;
-import CodeGeneration.src.main.java.CodeGen.Js.ScriptFile;
+import CodeGen.Environment;
+import CodeGen.Common.CodeGenFile;
+import CodeGen.Css.CssFile;
+import CodeGen.Js.ScriptFile;
 
 public class HtmlFile extends CodeGenFile {
     

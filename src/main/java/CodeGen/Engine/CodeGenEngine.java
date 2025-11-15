@@ -1,4 +1,4 @@
-package CodeGeneration.src.main.java.CodeGen.Engine;
+package CodeGen.Engine;
 
 public class CodeGenEngine {
 

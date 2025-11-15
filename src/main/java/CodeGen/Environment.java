@@ -1,4 +1,4 @@
-package CodeGeneration.src.main.java.CodeGen;
+package CodeGen;
 
 public class Environment {
     public static final String OUTPUT_DIRECTORY = "CodeGen/Output/";

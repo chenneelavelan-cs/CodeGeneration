@@ -1,7 +1,7 @@
-package CodeGeneration.src.main.java.CodeGen.Js;
+package CodeGen.Js;
 
-import CodeGeneration.src.main.java.CodeGen.Environment;
-import CodeGeneration.src.main.java.CodeGen.Common.Utils;
+import CodeGen.Environment;
+import CodeGen.Common.Utils;
 
 public class ExpressionStatement implements Expression {
     

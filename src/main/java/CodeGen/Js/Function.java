@@ -1,4 +1,4 @@
-package CodeGeneration.src.main.java.CodeGen.Js;
+package CodeGen.Js;
 
 import java.util.ArrayList;
 import java.util.List;
