@@ -1,0 +1,1389 @@
+{
+    "css": {
+        "main-styles": {
+            "fileName": "main",
+            "rules": [
+                {
+                    "selector": "*",
+                    "properties": {
+                        "margin": "0",
+                        "padding": "0",
+                        "box-sizing": "border-box"
+                    }
+                },
+                {
+                    "selector": "body",
+                    "properties": {
+                        "font-family": "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+                        "line-height": "1.6",
+                        "color": "#333",
+                        "background": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                        "min-height": "100vh",
+                        "display": "flex",
+                        "flex-direction": "column"
+                    }
+                },
+                {
+                    "selector": ".container",
+                    "properties": {
+                        "max-width": "1200px",
+                        "margin": "0 auto",
+                        "padding": "0 20px"
+                    }
+                },
+                {
+                    "selector": "header",
+                    "properties": {
+                        "background": "rgba(255, 255, 255, 0.1)",
+                        "backdrop-filter": "blur(10px)",
+                        "border-bottom": "1px solid rgba(255, 255, 255, 0.2)",
+                        "padding": "1rem 0",
+                        "position": "sticky",
+                        "top": "0",
+                        "z-index": "1000"
+                    }
+                },
+                {
+                    "selector": ".navbar",
+                    "properties": {
+                        "display": "flex",
+                        "justify-content": "space-between",
+                        "align-items": "center",
+                        "flex-wrap": "wrap"
+                    }
+                },
+                {
+                    "selector": ".logo",
+                    "properties": {
+                        "font-size": "2rem",
+                        "font-weight": "bold",
+                        "color": "white",
+                        "text-decoration": "none",
+                        "text-shadow": "2px 2px 4px rgba(0, 0, 0, 0.3)"
+                    }
+                },
+                {
+                    "selector": ".nav-menu",
+                    "properties": {
+                        "display": "flex",
+                        "list-style": "none",
+                        "gap": "2rem"
+                    }
+                },
+                {
+                    "selector": ".nav-link",
+                    "properties": {
+                        "color": "white",
+                        "text-decoration": "none",
+                        "font-weight": "500",
+                        "transition": "all 0.3s ease",
+                        "padding": "0.5rem 1rem",
+                        "border-radius": "25px"
+                    }
+                },
+                {
+                    "selector": ".nav-link:hover",
+                    "properties": {
+                        "background": "rgba(255, 255, 255, 0.2)",
+                        "transform": "translateY(-2px)",
+                        "box-shadow": "0 4px 15px rgba(0, 0, 0, 0.2)"
+                    }
+                },
+                {
+                    "selector": "main",
+                    "properties": {
+                        "flex": "1",
+                        "padding": "4rem 0"
+                    }
+                },
+                {
+                    "selector": ".hero-section",
+                    "properties": {
+                        "text-align": "center",
+                        "color": "white",
+                        "margin-bottom": "4rem"
+                    }
+                },
+                {
+                    "selector": ".hero-title",
+                    "properties": {
+                        "font-size": "3.5rem",
+                        "margin-bottom": "1rem",
+                        "text-shadow": "2px 2px 4px rgba(0, 0, 0, 0.3)",
+                        "animation": "fadeInUp 1s ease-out"
+                    }
+                },
+                {
+                    "selector": ".hero-subtitle",
+                    "properties": {
+                        "font-size": "1.2rem",
+                        "opacity": "0.9",
+                        "margin-bottom": "2rem",
+                        "animation": "fadeInUp 1s ease-out 0.3s both"
+                    }
+                },
+                {
+                    "selector": ".cta-button",
+                    "properties": {
+                        "display": "inline-block",
+                        "background": "linear-gradient(45deg, #ff6b6b, #ee5a24)",
+                        "color": "white",
+                        "padding": "1rem 2rem",
+                        "text-decoration": "none",
+                        "border-radius": "50px",
+                        "font-weight": "bold",
+                        "font-size": "1.1rem",
+                        "transition": "all 0.3s ease",
+                        "box-shadow": "0 4px 15px rgba(238, 90, 36, 0.4)",
+                        "animation": "fadeInUp 1s ease-out 0.6s both"
+                    }
+                },
+                {
+                    "selector": ".cta-button:hover",
+                    "properties": {
+                        "transform": "translateY(-3px) scale(1.05)",
+                        "box-shadow": "0 8px 25px rgba(238, 90, 36, 0.6)"
+                    }
+                },
+                {
+                    "selector": ".features-section",
+                    "properties": {
+                        "margin-bottom": "4rem"
+                    }
+                },
+                {
+                    "selector": ".section-title",
+                    "properties": {
+                        "text-align": "center",
+                        "color": "white",
+                        "font-size": "2.5rem",
+                        "margin-bottom": "3rem",
+                        "text-shadow": "2px 2px 4px rgba(0, 0, 0, 0.3)"
+                    }
+                },
+                {
+                    "selector": ".features-grid",
+                    "properties": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(auto-fit, minmax(300px, 1fr))",
+                        "gap": "2rem"
+                    }
+                },
+                {
+                    "selector": ".feature-card",
+                    "properties": {
+                        "background": "rgba(255, 255, 255, 0.1)",
+                        "backdrop-filter": "blur(10px)",
+                        "border-radius": "15px",
+                        "padding": "2rem",
+                        "text-align": "center",
+                        "color": "white",
+                        "transition": "all 0.3s ease",
+                        "border": "1px solid rgba(255, 255, 255, 0.2)"
+                    }
+                },
+                {
+                    "selector": ".feature-card:hover",
+                    "properties": {
+                        "transform": "translateY(-10px)",
+                        "box-shadow": "0 20px 40px rgba(0, 0, 0, 0.3)",
+                        "background": "rgba(255, 255, 255, 0.15)"
+                    }
+                },
+                {
+                    "selector": ".feature-icon",
+                    "properties": {
+                        "font-size": "3rem",
+                        "margin-bottom": "1rem",
+                        "color": "#ff6b6b"
+                    }
+                },
+                {
+                    "selector": ".feature-title",
+                    "properties": {
+                        "font-size": "1.5rem",
+                        "margin-bottom": "1rem",
+                        "font-weight": "bold"
+                    }
+                },
+                {
+                    "selector": ".feature-description",
+                    "properties": {
+                        "opacity": "0.9",
+                        "line-height": "1.6"
+                    }
+                },
+                {
+                    "selector": "footer",
+                    "properties": {
+                        "background": "rgba(0, 0, 0, 0.3)",
+                        "color": "white",
+                        "text-align": "center",
+                        "padding": "2rem 0",
+                        "border-top": "1px solid rgba(255, 255, 255, 0.2)"
+                    }
+                }
+            ]
+        },
+        "animations": {
+            "fileName": "animations",
+            "rules": [
+                {
+                    "selector": "@keyframes fadeInUp",
+                    "properties": {
+                        "0%": "opacity: 0; transform: translateY(30px);",
+                        "100%": "opacity: 1; transform: translateY(0);"
+                    }
+                },
+                {
+                    "selector": "@keyframes pulse",
+                    "properties": {
+                        "0%": "transform: scale(1);",
+                        "50%": "transform: scale(1.05);",
+                        "100%": "transform: scale(1);"
+                    }
+                },
+                {
+                    "selector": "@keyframes slideInLeft",
+                    "properties": {
+                        "0%": "transform: translateX(-100%);",
+                        "100%": "transform: translateX(0);"
+                    }
+                },
+                {
+                    "selector": "@keyframes slideInRight",
+                    "properties": {
+                        "0%": "transform: translateX(100%);",
+                        "100%": "transform: translateX(0);"
+                    }
+                },
+                {
+                    "selector": "@keyframes rotate360",
+                    "properties": {
+                        "0%": "transform: rotate(0deg);",
+                        "100%": "transform: rotate(360deg);"
+                    }
+                }
+            ]
+        },
+        "mobile-responsive": {
+            "fileName": "mobile",
+            "rules": [
+                {
+                    "selector": "@media (max-width: 768px)",
+                    "properties": {
+                        ".hero-title": "font-size: 2.5rem;",
+                        ".nav-menu": "flex-direction: column; gap: 1rem;",
+                        ".features-grid": "grid-template-columns: 1fr;",
+                        ".container": "padding: 0 15px;"
+                    }
+                },
+                {
+                    "selector": "@media (max-width: 480px)",
+                    "properties": {
+                        ".hero-title": "font-size: 2rem;",
+                        ".hero-subtitle": "font-size: 1rem;",
+                        ".feature-card": "padding: 1.5rem;",
+                        ".cta-button": "padding: 0.8rem 1.5rem; font-size: 1rem;"
+                    }
+                }
+            ]
+        }
+    },
+    "js": {
+        "main-app": {
+            "fileName": "main",
+            "statements": [
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "const",
+                    "variableName": "app",
+                    "value": {
+                        "type": "literal",
+                        "value": "{}"
+                    }
+                },
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "let",
+                    "variableName": "isAnimationPlaying",
+                    "value": {
+                        "type": "literal",
+                        "value": "false"
+                    }
+                },
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "const",
+                    "variableName": "navLinks",
+                    "value": {
+                        "type": "functionCall",
+                        "functionName": {
+                            "type": "propertyAccess",
+                            "object": {
+                                "type": "literal",
+                                "value": "document"
+                            },
+                            "property": "querySelectorAll"
+                        },
+                        "arguments": [
+                            {
+                                "type": "literal",
+                                "value": "'.nav-link'"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "const",
+                    "variableName": "featureCards",
+                    "value": {
+                        "type": "functionCall",
+                        "functionName": {
+                            "type": "propertyAccess",
+                            "object": {
+                                "type": "literal",
+                                "value": "document"
+                            },
+                            "property": "querySelectorAll"
+                        },
+                        "arguments": [
+                            {
+                                "type": "literal",
+                                "value": "'.feature-card'"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "const",
+                    "variableName": "ctaButton",
+                    "value": {
+                        "type": "functionCall",
+                        "functionName": {
+                            "type": "propertyAccess",
+                            "object": {
+                                "type": "literal",
+                                "value": "document"
+                            },
+                            "property": "querySelector"
+                        },
+                        "arguments": [
+                            {
+                                "type": "literal",
+                                "value": "'.cta-button'"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "initializeApp",
+                    "parameters": [],
+                    "bodyStatements": [
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "console"
+                                    },
+                                    "property": "log"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'Initializing application...'"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "literal",
+                                    "value": "setupEventListeners"
+                                },
+                                "arguments": []
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "setupEventListeners",
+                    "parameters": [],
+                    "bodyStatements": [
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "navLinks"
+                                    },
+                                    "property": "forEach"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "link => {\n        link.addEventListener('click', handleNavClick);\n        link.addEventListener('mouseenter', handleNavHover);\n    }"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "featureCards"
+                                    },
+                                    "property": "forEach"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "card => {\n        card.addEventListener('mouseenter', handleCardHover);\n        card.addEventListener('mouseleave', handleCardLeave);\n    }"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "ctaButton"
+                                    },
+                                    "property": "addEventListener"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'click'"
+                                    },
+                                    {
+                                        "type": "literal",
+                                        "value": "handleCtaClick"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "handleNavClick",
+                    "parameters": ["event"],
+                    "bodyStatements": [
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "event"
+                                    },
+                                    "property": "preventDefault"
+                                },
+                                "arguments": []
+                            }
+                        },
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "href",
+                            "value": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "propertyAccess",
+                                        "object": {
+                                            "type": "literal",
+                                            "value": "event"
+                                        },
+                                        "property": "target"
+                                    },
+                                    "property": "getAttribute"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'href'"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "targetId",
+                            "value": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "href"
+                                    },
+                                    "property": "slice"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "1"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "literal",
+                                    "value": "smoothScrollTo"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "targetId"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "handleNavHover",
+                    "parameters": ["event"],
+                    "bodyStatements": [
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "propertyAccess",
+                                        "object": {
+                                            "type": "literal",
+                                            "value": "event"
+                                        },
+                                        "property": "target"
+                                    },
+                                    "property": "style"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "'transform: scale(1.1); transition: all 0.3s ease;'"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "handleCardHover",
+                    "parameters": ["event"],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "card",
+                            "value": {
+                                "type": "propertyAccess",
+                                "object": {
+                                    "type": "literal",
+                                    "value": "event"
+                                },
+                                "property": "currentTarget"
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "propertyAccess",
+                                        "object": {
+                                            "type": "literal",
+                                            "value": "card"
+                                        },
+                                        "property": "classList"
+                                    },
+                                    "property": "add"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'card-hover'"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "handleCardLeave",
+                    "parameters": ["event"],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "card",
+                            "value": {
+                                "type": "propertyAccess",
+                                "object": {
+                                    "type": "literal",
+                                    "value": "event"
+                                },
+                                "property": "currentTarget"
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "propertyAccess",
+                                        "object": {
+                                            "type": "literal",
+                                            "value": "card"
+                                        },
+                                        "property": "classList"
+                                    },
+                                    "property": "remove"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'card-hover'"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "handleCtaClick",
+                    "parameters": ["event"],
+                    "bodyStatements": [
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "event"
+                                    },
+                                    "property": "preventDefault"
+                                },
+                                "arguments": []
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "console"
+                                    },
+                                    "property": "log"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'CTA button clicked! 🎉'"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "smoothScrollTo",
+                    "parameters": ["targetId"],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "targetElement",
+                            "value": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "document"
+                                    },
+                                    "property": "getElementById"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "targetId"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "targetElement"
+                                    },
+                                    "property": "scrollIntoView"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "{ behavior: 'smooth', block: 'start' }"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "expressionStatement",
+                    "expression": {
+                        "type": "functionCall",
+                        "functionName": {
+                            "type": "propertyAccess",
+                            "object": {
+                                "type": "literal",
+                                "value": "document"
+                            },
+                            "property": "addEventListener"
+                        },
+                        "arguments": [
+                            {
+                                "type": "literal",
+                                "value": "'DOMContentLoaded'"
+                            },
+                            {
+                                "type": "literal",
+                                "value": "initializeApp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "utilities": {
+            "fileName": "utils",
+            "statements": [
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "throttle",
+                    "parameters": ["func", "delay"],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "let",
+                            "variableName": "timeoutId",
+                            "value": {
+                                "type": "literal",
+                                "value": "null"
+                            }
+                        },
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "let",
+                            "variableName": "lastExecTime",
+                            "value": {
+                                "type": "literal",
+                                "value": "0"
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "literal",
+                                "value": "return function (...args) {\n        const currentTime = Date.now();\n        if (currentTime - lastExecTime > delay) {\n            func.apply(this, args);\n            lastExecTime = currentTime;\n        }\n    }"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "debounce",
+                    "parameters": ["func", "delay"],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "let",
+                            "variableName": "timeoutId",
+                            "value": {
+                                "type": "literal",
+                                "value": "null"
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "literal",
+                                "value": "return function (...args) {\n        clearTimeout(timeoutId);\n        timeoutId = setTimeout(() => func.apply(this, args), delay);\n    }"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "generateRandomColor",
+                    "parameters": [],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "colors",
+                            "value": {
+                                "type": "literal",
+                                "value": "['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3', '#54a0ff']"
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "literal",
+                                "value": "return colors[Math.floor(Math.random() * colors.length)]"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "createRippleEffect",
+                    "parameters": ["element", "event"],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "ripple",
+                            "value": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "document"
+                                    },
+                                    "property": "createElement"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'span'"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "ripple"
+                                    },
+                                    "property": "className"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "'ripple'"
+                                }
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "element"
+                                    },
+                                    "property": "appendChild"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "ripple"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "showNotification",
+                    "parameters": ["message", "type", "duration"],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "notification",
+                            "value": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "document"
+                                    },
+                                    "property": "createElement"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'div'"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "notification"
+                                    },
+                                    "property": "innerHTML"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "message"
+                                }
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "propertyAccess",
+                                        "object": {
+                                            "type": "literal",
+                                            "value": "document"
+                                        },
+                                        "property": "body"
+                                    },
+                                    "property": "appendChild"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "notification"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "html": {
+        "main-page": {
+            "fileName": "index",
+            "title": "Modern Code Generation Platform",
+            "elements": {
+                "root": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "app-root"
+                    },
+                    "children": ["header", "main", "footer"]
+                },
+                "header": {
+                    "tagName": "header",
+                    "attributes": {},
+                    "children": ["nav-container"]
+                },
+                "nav-container": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "container"
+                    },
+                    "children": ["navbar"]
+                },
+                "navbar": {
+                    "tagName": "nav",
+                    "attributes": {
+                        "class": "navbar"
+                    },
+                    "children": ["logo", "nav-menu"]
+                },
+                "logo": {
+                    "tagName": "a",
+                    "attributes": {
+                        "href": "#",
+                        "class": "logo"
+                    },
+                    "textContent": "CodeGen Pro"
+                },
+                "nav-menu": {
+                    "tagName": "ul",
+                    "attributes": {
+                        "class": "nav-menu"
+                    },
+                    "children": ["nav-item-1", "nav-item-2", "nav-item-3", "nav-item-4"]
+                },
+                "nav-item-1": {
+                    "tagName": "li",
+                    "attributes": {},
+                    "children": ["nav-link-1"]
+                },
+                "nav-link-1": {
+                    "tagName": "a",
+                    "attributes": {
+                        "href": "#home",
+                        "class": "nav-link"
+                    },
+                    "textContent": "Home"
+                },
+                "nav-item-2": {
+                    "tagName": "li",
+                    "attributes": {},
+                    "children": ["nav-link-2"]
+                },
+                "nav-link-2": {
+                    "tagName": "a",
+                    "attributes": {
+                        "href": "#features",
+                        "class": "nav-link"
+                    },
+                    "textContent": "Features"
+                },
+                "nav-item-3": {
+                    "tagName": "li",
+                    "attributes": {},
+                    "children": ["nav-link-3"]
+                },
+                "nav-link-3": {
+                    "tagName": "a",
+                    "attributes": {
+                        "href": "#about",
+                        "class": "nav-link"
+                    },
+                    "textContent": "About"
+                },
+                "nav-item-4": {
+                    "tagName": "li",
+                    "attributes": {},
+                    "children": ["nav-link-4"]
+                },
+                "nav-link-4": {
+                    "tagName": "a",
+                    "attributes": {
+                        "href": "#contact",
+                        "class": "nav-link"
+                    },
+                    "textContent": "Contact"
+                },
+                "main": {
+                    "tagName": "main",
+                    "attributes": {},
+                    "children": ["main-container"]
+                },
+                "main-container": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "container"
+                    },
+                    "children": ["hero-section", "features-section"]
+                },
+                "hero-section": {
+                    "tagName": "section",
+                    "attributes": {
+                        "class": "hero-section",
+                        "id": "home"
+                    },
+                    "children": ["hero-title", "hero-subtitle", "cta-button"]
+                },
+                "hero-title": {
+                    "tagName": "h1",
+                    "attributes": {
+                        "class": "hero-title"
+                    },
+                    "textContent": "Revolutionary Code Generation"
+                },
+                "hero-subtitle": {
+                    "tagName": "p",
+                    "attributes": {
+                        "class": "hero-subtitle"
+                    },
+                    "textContent": "Transform your ideas into beautiful, functional code with our advanced AST-based generation platform"
+                },
+                "cta-button": {
+                    "tagName": "a",
+                    "attributes": {
+                        "href": "#features",
+                        "class": "cta-button"
+                    },
+                    "textContent": "Get Started Now"
+                },
+                "features-section": {
+                    "tagName": "section",
+                    "attributes": {
+                        "class": "features-section",
+                        "id": "features"
+                    },
+                    "children": ["features-title", "features-grid"]
+                },
+                "features-title": {
+                    "tagName": "h2",
+                    "attributes": {
+                        "class": "section-title"
+                    },
+                    "textContent": "Powerful Features"
+                },
+                "features-grid": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "features-grid"
+                    },
+                    "children": ["feature-card-1", "feature-card-2", "feature-card-3", "feature-card-4", "feature-card-5", "feature-card-6"]
+                },
+                "feature-card-1": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["feature-icon-1", "feature-title-1", "feature-desc-1"]
+                },
+                "feature-icon-1": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-icon"
+                    },
+                    "textContent": "🚀"
+                },
+                "feature-title-1": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "textContent": "Lightning Fast"
+                },
+                "feature-desc-1": {
+                    "tagName": "p",
+                    "attributes": {
+                        "class": "feature-description"
+                    },
+                    "textContent": "Generate complex applications in seconds with our optimized AST processing engine"
+                },
+                "feature-card-2": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["feature-icon-2", "feature-title-2", "feature-desc-2"]
+                },
+                "feature-icon-2": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-icon"
+                    },
+                    "textContent": "🎨"
+                },
+                "feature-title-2": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "textContent": "Beautiful UI"
+                },
+                "feature-desc-2": {
+                    "tagName": "p",
+                    "attributes": {
+                        "class": "feature-description"
+                    },
+                    "textContent": "Create stunning user interfaces with our advanced CSS generation and responsive design patterns"
+                },
+                "feature-card-3": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["feature-icon-3", "feature-title-3", "feature-desc-3"]
+                },
+                "feature-icon-3": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-icon"
+                    },
+                    "textContent": "⚡"
+                },
+                "feature-title-3": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "textContent": "Smart Logic"
+                },
+                "feature-desc-3": {
+                    "tagName": "p",
+                    "attributes": {
+                        "class": "feature-description"
+                    },
+                    "textContent": "Advanced JavaScript generation with intelligent expression parsing and optimization"
+                },
+                "feature-card-4": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["feature-icon-4", "feature-title-4", "feature-desc-4"]
+                },
+                "feature-icon-4": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-icon"
+                    },
+                    "textContent": "🔧"
+                },
+                "feature-title-4": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "textContent": "Highly Configurable"
+                },
+                "feature-desc-4": {
+                    "tagName": "p",
+                    "attributes": {
+                        "class": "feature-description"
+                    },
+                    "textContent": "Customize every aspect of your generated code with flexible JSON-based configuration"
+                },
+                "feature-card-5": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["feature-icon-5", "feature-title-5", "feature-desc-5"]
+                },
+                "feature-icon-5": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-icon"
+                    },
+                    "textContent": "📱"
+                },
+                "feature-title-5": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "textContent": "Mobile Ready"
+                },
+                "feature-desc-5": {
+                    "tagName": "p",
+                    "attributes": {
+                        "class": "feature-description"
+                    },
+                    "textContent": "Generate responsive applications that work perfectly across all devices and screen sizes"
+                },
+                "feature-card-6": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["feature-icon-6", "feature-title-6", "feature-desc-6"]
+                },
+                "feature-icon-6": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-icon"
+                    },
+                    "textContent": "🌟"
+                },
+                "feature-title-6": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "textContent": "Modern Standards"
+                },
+                "feature-desc-6": {
+                    "tagName": "p",
+                    "attributes": {
+                        "class": "feature-description"
+                    },
+                    "textContent": "Built with the latest web standards and best practices for optimal performance and accessibility"
+                },
+                "footer": {
+                    "tagName": "footer",
+                    "attributes": {},
+                    "children": ["footer-content"]
+                },
+                "footer-content": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "container"
+                    },
+                    "children": ["footer-text"]
+                },
+                "footer-text": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "textContent": "© 2025 CodeGen Pro. Transforming development with intelligent code generation."
+                }
+            },
+            "cssFiles": ["main-styles", "animations", "mobile-responsive"],
+            "jsFiles": ["main-app", "utilities"]
+        }
+    },
+    "htmlRootId": "root",
+    "outputDirectory": "SampleOut-2"
+}

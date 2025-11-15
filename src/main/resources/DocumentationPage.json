@@ -1,0 +1,1197 @@
+{
+    "css": {
+        "documentation-styles": {
+            "fileName": "documentation-styles",
+            "rules": [
+                {
+                    "selector": "*",
+                    "properties": {
+                        "margin": "0",
+                        "padding": "0",
+                        "box-sizing": "border-box",
+                        "scroll-behavior": "smooth"
+                    }
+                },
+                {
+                    "selector": "body",
+                    "properties": {
+                        "font-family": "'Inter', 'Segoe UI', sans-serif",
+                        "line-height": "1.6",
+                        "color": "#2c3e50",
+                        "background": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                        "min-height": "100vh"
+                    }
+                },
+                {
+                    "selector": ".container",
+                    "properties": {
+                        "max-width": "1200px",
+                        "margin": "0 auto",
+                        "padding": "0 2rem"
+                    }
+                },
+                {
+                    "selector": ".documentation-header",
+                    "properties": {
+                        "background": "rgba(255, 255, 255, 0.95)",
+                        "backdrop-filter": "blur(10px)",
+                        "padding": "3rem 0",
+                        "text-align": "center",
+                        "margin-bottom": "2rem",
+                        "border-radius": "20px",
+                        "margin": "2rem",
+                        "box-shadow": "0 20px 40px rgba(0, 0, 0, 0.1)"
+                    }
+                },
+                {
+                    "selector": ".doc-title",
+                    "properties": {
+                        "font-size": "3.5rem",
+                        "font-weight": "700",
+                        "margin-bottom": "1rem"
+                    }
+                },
+                {
+                    "selector": ".doc-subtitle",
+                    "properties": {
+                        "font-size": "1.3rem",
+                        "color": "#7f8c8d",
+                        "max-width": "800px",
+                        "margin": "0 auto"
+                    }
+                },
+                {
+                    "selector": ".navigation",
+                    "properties": {
+                        "background": "rgba(255, 255, 255, 0.9)",
+                        "backdrop-filter": "blur(10px)",
+                        "padding": "1rem 2rem",
+                        "margin": "0 2rem 2rem 2rem",
+                        "border-radius": "15px",
+                        "display": "flex",
+                        "justify-content": "center",
+                        "flex-wrap": "wrap",
+                        "gap": "1rem",
+                        "box-shadow": "0 10px 25px rgba(0, 0, 0, 0.1)"
+                    }
+                },
+                {
+                    "selector": ".nav-link",
+                    "properties": {
+                        "padding": "0.7rem 1.5rem",
+                        "text-decoration": "none",
+                        "color": "#667eea",
+                        "border": "2px solid #667eea",
+                        "border-radius": "50px",
+                        "transition": "all 0.3s ease",
+                        "font-weight": "500"
+                    }
+                },
+                {
+                    "selector": ".nav-link:hover",
+                    "properties": {
+                        "background": "#667eea",
+                        "color": "white",
+                        "transform": "translateY(-2px)",
+                        "box-shadow": "0 5px 15px rgba(102, 126, 234, 0.3)"
+                    }
+                },
+                {
+                    "selector": ".content-grid",
+                    "properties": {
+                        "display": "grid",
+                        "grid-template-columns": "1fr",
+                        "gap": "2rem",
+                        "padding": "0 2rem",
+                        "margin-bottom": "3rem"
+                    }
+                },
+                {
+                    "selector": ".doc-section",
+                    "properties": {
+                        "background": "rgba(255, 255, 255, 0.95)",
+                        "backdrop-filter": "blur(10px)",
+                        "padding": "2.5rem",
+                        "border-radius": "20px",
+                        "box-shadow": "0 15px 35px rgba(0, 0, 0, 0.1)",
+                        "transition": "transform 0.3s ease",
+                        "border-left": "5px solid #667eea"
+                    }
+                },
+                {
+                    "selector": ".doc-section:hover",
+                    "properties": {
+                        "transform": "translateY(-5px)",
+                        "box-shadow": "0 20px 40px rgba(0, 0, 0, 0.15)"
+                    }
+                },
+                {
+                    "selector": ".section-title",
+                    "properties": {
+                        "font-size": "2rem",
+                        "font-weight": "600",
+                        "color": "#2c3e50",
+                        "margin-bottom": "1.5rem",
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.5rem"
+                    }
+                },
+                {
+                    "selector": ".section-icon",
+                    "properties": {
+                        "font-size": "1.8rem",
+                        "color": "#667eea"
+                    }
+                },
+                {
+                    "selector": ".section-content",
+                    "properties": {
+                        "color": "#555",
+                        "line-height": "1.7"
+                    }
+                },
+                {
+                    "selector": ".code-block",
+                    "properties": {
+                        "background": "#f8f9fa",
+                        "border": "1px solid #e9ecef",
+                        "border-radius": "8px",
+                        "padding": "1.5rem",
+                        "margin": "1rem 0",
+                        "font-family": "'JetBrains Mono', 'Fira Code', monospace",
+                        "font-size": "0.9rem",
+                        "overflow-x": "auto",
+                        "color": "#495057"
+                    }
+                },
+                {
+                    "selector": ".highlight",
+                    "properties": {
+                        "background": "linear-gradient(120deg, #a8edea 0%, #fed6e3 100%)",
+                        "padding": "0.2rem 0.5rem",
+                        "border-radius": "4px",
+                        "font-weight": "500"
+                    }
+                },
+                {
+                    "selector": ".architecture-flow",
+                    "properties": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "space-between",
+                        "background": "#f8f9fa",
+                        "padding": "1.5rem",
+                        "border-radius": "10px",
+                        "margin": "1rem 0",
+                        "flex-wrap": "wrap",
+                        "gap": "1rem"
+                    }
+                },
+                {
+                    "selector": ".flow-step",
+                    "properties": {
+                        "background": "white",
+                        "padding": "1rem",
+                        "border-radius": "8px",
+                        "text-align": "center",
+                        "box-shadow": "0 2px 10px rgba(0, 0, 0, 0.1)",
+                        "min-width": "120px",
+                        "flex": "1"
+                    }
+                },
+                {
+                    "selector": ".flow-arrow",
+                    "properties": {
+                        "font-size": "1.5rem",
+                        "color": "#667eea"
+                    }
+                },
+                {
+                    "selector": ".feature-grid",
+                    "properties": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(auto-fit, minmax(280px, 1fr))",
+                        "gap": "1.5rem",
+                        "margin": "2rem 0"
+                    }
+                },
+                {
+                    "selector": ".feature-card",
+                    "properties": {
+                        "background": "white",
+                        "padding": "1.5rem",
+                        "border-radius": "12px",
+                        "box-shadow": "0 5px 15px rgba(0, 0, 0, 0.08)",
+                        "transition": "transform 0.3s ease",
+                        "border-top": "3px solid #667eea"
+                    }
+                },
+                {
+                    "selector": ".feature-card:hover",
+                    "properties": {
+                        "transform": "translateY(-3px)",
+                        "box-shadow": "0 8px 25px rgba(0, 0, 0, 0.12)"
+                    }
+                },
+                {
+                    "selector": ".feature-title",
+                    "properties": {
+                        "font-weight": "600",
+                        "color": "#2c3e50",
+                        "margin-bottom": "0.5rem"
+                    }
+                },
+                {
+                    "selector": ".json-structure",
+                    "properties": {
+                        "background": "#2c3e50",
+                        "color": "#ecf0f1",
+                        "padding": "1.5rem",
+                        "border-radius": "8px",
+                        "font-family": "'JetBrains Mono', monospace",
+                        "font-size": "0.85rem",
+                        "line-height": "1.4",
+                        "margin": "1rem 0",
+                        "overflow-x": "auto"
+                    }
+                },
+                {
+                    "selector": ".footer",
+                    "properties": {
+                        "background": "rgba(255, 255, 255, 0.9)",
+                        "backdrop-filter": "blur(10px)",
+                        "padding": "2rem",
+                        "text-align": "center",
+                        "margin": "2rem",
+                        "border-radius": "15px",
+                        "color": "#7f8c8d"
+                    }
+                },
+                {
+                    "selector": "@keyframes gradientMove",
+                    "properties": {
+                        "0%, 100%": "background-position: 0% 50%",
+                        "50%": "background-position: 100% 50%"
+                    }
+                }
+            ]
+        }
+    },
+    "js": {
+        "documentation-script": {
+            "fileName": "documentation-script",
+            "statements": [
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "const",
+                    "variableName": "navLinks",
+                    "value": {
+                        "type": "functionCall",
+                        "functionName": {
+                            "type": "propertyAccess",
+                            "object": {
+                                "type": "literal",
+                                "value": "document"
+                            },
+                            "property": "querySelectorAll"
+                        },
+                        "arguments": [
+                            {
+                                "type": "literal",
+                                "value": "'.nav-link'"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "smoothScroll",
+                    "parameters": ["targetId"],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "target",
+                            "value": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "document"
+                                    },
+                                    "property": "getElementById"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "targetId"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "target"
+                                    },
+                                    "property": "scrollIntoView"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "{ behavior: 'smooth' }"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "initializeDocumentation",
+                    "parameters": [],
+                    "bodyStatements": [
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "console"
+                                    },
+                                    "property": "log"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'📚 AST Documentation Platform Initialized!'"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "expressionStatement",
+                    "expression": {
+                        "type": "functionCall",
+                        "functionName": {
+                            "type": "propertyAccess",
+                            "object": {
+                                "type": "literal",
+                                "value": "document"
+                            },
+                            "property": "addEventListener"
+                        },
+                        "arguments": [
+                            {
+                                "type": "literal",
+                                "value": "'DOMContentLoaded'"
+                            },
+                            {
+                                "type": "literal",
+                                "value": "initializeDocumentation"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "html": {
+        "ast-documentation": {
+            "fileName": "ast-documentation",
+            "elements": {
+                "main-container": {
+                    "tagName": "div",
+                    "attributes": {},
+                    "children": ["header-section", "navigation-section", "content-sections", "footer-section"]
+                },
+                "header-section": {
+                    "tagName": "header",
+                    "attributes": {
+                        "class": "documentation-header"
+                    },
+                    "children": ["header-container"]
+                },
+                "header-container": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "container"
+                    },
+                    "children": ["main-title", "subtitle"]
+                },
+                "main-title": {
+                    "tagName": "h1",
+                    "attributes": {
+                        "class": "doc-title"
+                    },
+                    "children": [],
+                    "content": "🌟 AST-Based Code Generation Platform"
+                },
+                "subtitle": {
+                    "tagName": "p",
+                    "attributes": {
+                        "class": "doc-subtitle"
+                    },
+                    "children": [],
+                    "content": "Transform JSON specifications into fully functional web applications with sophisticated Abstract Syntax Tree processing"
+                },
+                "navigation-section": {
+                    "tagName": "nav",
+                    "attributes": {
+                        "class": "navigation"
+                    },
+                    "children": ["nav-overview", "nav-architecture", "nav-models", "nav-patterns", "nav-usage", "nav-benefits"]
+                },
+                "nav-overview": {
+                    "tagName": "a",
+                    "attributes": {
+                        "href": "#overview",
+                        "class": "nav-link"
+                    },
+                    "children": [],
+                    "content": "📋 Overview"
+                },
+                "nav-architecture": {
+                    "tagName": "a",
+                    "attributes": {
+                        "href": "#architecture",
+                        "class": "nav-link"
+                    },
+                    "children": [],
+                    "content": "🏗️ Architecture"
+                },
+                "nav-models": {
+                    "tagName": "a",
+                    "attributes": {
+                        "href": "#models",
+                        "class": "nav-link"
+                    },
+                    "children": [],
+                    "content": "📊 Data Models"
+                },
+                "nav-patterns": {
+                    "tagName": "a",
+                    "attributes": {
+                        "href": "#patterns",
+                        "class": "nav-link"
+                    },
+                    "children": [],
+                    "content": "🎯 Design Patterns"
+                },
+                "nav-usage": {
+                    "tagName": "a",
+                    "attributes": {
+                        "href": "#usage",
+                        "class": "nav-link"
+                    },
+                    "children": [],
+                    "content": "🚀 Usage"
+                },
+                "nav-benefits": {
+                    "tagName": "a",
+                    "attributes": {
+                        "href": "#benefits",
+                        "class": "nav-link"
+                    },
+                    "children": [],
+                    "content": "⭐ Benefits"
+                },
+                "content-sections": {
+                    "tagName": "main",
+                    "attributes": {
+                        "class": "content-grid"
+                    },
+                    "children": ["overview-section", "architecture-section", "models-section", "patterns-section", "usage-section", "benefits-section"]
+                },
+                "overview-section": {
+                    "tagName": "section",
+                    "attributes": {
+                        "id": "overview",
+                        "class": "doc-section"
+                    },
+                    "children": ["overview-title", "overview-content"]
+                },
+                "overview-title": {
+                    "tagName": "h2",
+                    "attributes": {
+                        "class": "section-title"
+                    },
+                    "children": ["overview-icon", "overview-text"]
+                },
+                "overview-icon": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "section-icon"
+                    },
+                    "children": [],
+                    "content": "📋"
+                },
+                "overview-text": {
+                    "tagName": "span",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Overview"
+                },
+                "overview-content": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "section-content"
+                    },
+                    "children": ["overview-description", "overview-pipeline"]
+                },
+                "overview-description": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "This platform implements a sophisticated Abstract Syntax Tree (AST) based code generation system that transforms JSON specifications into fully functional web applications. The system generates HTML, CSS, and JavaScript files from structured JSON input, enabling rapid prototyping and automated code creation."
+                },
+                "overview-pipeline": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "architecture-flow"
+                    },
+                    "children": ["step1", "arrow1", "step2", "arrow2", "step3", "arrow3", "step4", "arrow4", "step5"]
+                },
+                "step1": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "flow-step"
+                    },
+                    "children": [],
+                    "content": "JSON AST File"
+                },
+                "arrow1": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "flow-arrow"
+                    },
+                    "children": [],
+                    "content": "→"
+                },
+                "step2": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "flow-step"
+                    },
+                    "children": [],
+                    "content": "CodeGenerator"
+                },
+                "arrow2": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "flow-arrow"
+                    },
+                    "children": [],
+                    "content": "→"
+                },
+                "step3": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "flow-step"
+                    },
+                    "children": [],
+                    "content": "ModelConverter"
+                },
+                "arrow3": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "flow-arrow"
+                    },
+                    "children": [],
+                    "content": "→"
+                },
+                "step4": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "flow-step"
+                    },
+                    "children": [],
+                    "content": "File Factory"
+                },
+                "arrow4": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "flow-arrow"
+                    },
+                    "children": [],
+                    "content": "→"
+                },
+                "step5": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "flow-step"
+                    },
+                    "children": [],
+                    "content": "Generated Files"
+                },
+                "architecture-section": {
+                    "tagName": "section",
+                    "attributes": {
+                        "id": "architecture",
+                        "class": "doc-section"
+                    },
+                    "children": ["arch-title", "arch-content"]
+                },
+                "arch-title": {
+                    "tagName": "h2",
+                    "attributes": {
+                        "class": "section-title"
+                    },
+                    "children": ["arch-icon", "arch-text"]
+                },
+                "arch-icon": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "section-icon"
+                    },
+                    "children": [],
+                    "content": "🏗️"
+                },
+                "arch-text": {
+                    "tagName": "span",
+                    "attributes": {},
+                    "children": [],
+                    "content": "System Architecture"
+                },
+                "arch-content": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "section-content"
+                    },
+                    "children": ["arch-description", "ast-structure"]
+                },
+                "arch-description": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "The core AST structure defines the complete application specification with separate sections for CSS, JavaScript, and HTML content, along with metadata for file linking and output configuration."
+                },
+                "ast-structure": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "json-structure"
+                    },
+                    "children": [],
+                    "content": "{\n  \"css\": {\n    \"file-id\": {\n      \"fileName\": \"styles\",\n      \"rules\": [...]\n    }\n  },\n  \"js\": {\n    \"script-id\": {\n      \"fileName\": \"app\",\n      \"statements\": [...]\n    }\n  },\n  \"html\": {\n    \"page-id\": {\n      \"fileName\": \"index\",\n      \"elements\": {...},\n      \"cssFiles\": [...],\n      \"jsFiles\": [...]\n    }\n  },\n  \"htmlRootId\": \"root-element\",\n  \"outputDirectory\": \"dist\"\n}"
+                },
+                "models-section": {
+                    "tagName": "section",
+                    "attributes": {
+                        "id": "models",
+                        "class": "doc-section"
+                    },
+                    "children": ["models-title", "models-content"]
+                },
+                "models-title": {
+                    "tagName": "h2",
+                    "attributes": {
+                        "class": "section-title"
+                    },
+                    "children": ["models-icon", "models-text"]
+                },
+                "models-icon": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "section-icon"
+                    },
+                    "children": [],
+                    "content": "📊"
+                },
+                "models-text": {
+                    "tagName": "span",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Data Models"
+                },
+                "models-content": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "section-content"
+                    },
+                    "children": ["models-grid"]
+                },
+                "models-grid": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-grid"
+                    },
+                    "children": ["html-model", "css-model", "js-model"]
+                },
+                "html-model": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["html-model-title", "html-model-desc", "html-model-example"]
+                },
+                "html-model-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "🌐 HTML Model"
+                },
+                "html-model-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Defines document structure using element hierarchy with ID-based references, attributes, and content mapping."
+                },
+                "html-model-example": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "code-block"
+                    },
+                    "children": [],
+                    "content": "{\n  \"fileName\": \"index\",\n  \"elements\": {\n    \"root\": {\n      \"tagName\": \"div\",\n      \"attributes\": {\"class\": \"app\"},\n      \"children\": [\"header\", \"main\"]\n    }\n  }\n}"
+                },
+                "css-model": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["css-model-title", "css-model-desc", "css-model-example"]
+                },
+                "css-model-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "🎨 CSS Model"
+                },
+                "css-model-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Organizes styling rules with selectors and property collections, supporting animations and responsive design."
+                },
+                "css-model-example": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "code-block"
+                    },
+                    "children": [],
+                    "content": "{\n  \"fileName\": \"styles\",\n  \"rules\": [{\n    \"selector\": \".container\",\n    \"properties\": {\n      \"max-width\": \"1200px\",\n      \"margin\": \"0 auto\"\n    }\n  }]\n}"
+                },
+                "js-model": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["js-model-title", "js-model-desc", "js-model-example"]
+                },
+                "js-model-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "⚡ JavaScript Model"
+                },
+                "js-model-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Polymorphic statement system supporting variables, functions, expressions with proper AST representation."
+                },
+                "js-model-example": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "code-block"
+                    },
+                    "children": [],
+                    "content": "{\n  \"type\": \"variableDeclaration\",\n  \"declarationType\": \"const\",\n  \"variableName\": \"app\",\n  \"value\": {\n    \"type\": \"literal\",\n    \"value\": \"'Hello World'\"\n  }\n}"
+                },
+                "patterns-section": {
+                    "tagName": "section",
+                    "attributes": {
+                        "id": "patterns",
+                        "class": "doc-section"
+                    },
+                    "children": ["patterns-title", "patterns-content"]
+                },
+                "patterns-title": {
+                    "tagName": "h2",
+                    "attributes": {
+                        "class": "section-title"
+                    },
+                    "children": ["patterns-icon", "patterns-text"]
+                },
+                "patterns-icon": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "section-icon"
+                    },
+                    "children": [],
+                    "content": "🎯"
+                },
+                "patterns-text": {
+                    "tagName": "span",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Design Patterns"
+                },
+                "patterns-content": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "section-content"
+                    },
+                    "children": ["patterns-grid"]
+                },
+                "patterns-grid": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-grid"
+                    },
+                    "children": ["factory-pattern", "builder-pattern", "polymorphism-pattern", "strategy-pattern"]
+                },
+                "factory-pattern": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["factory-title", "factory-desc"]
+                },
+                "factory-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "🏭 Factory Pattern"
+                },
+                "factory-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "ModelConverter acts as a factory creating file objects from model data with specialized converters for each file type."
+                },
+                "builder-pattern": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["builder-title", "builder-desc"]
+                },
+                "builder-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "🔨 Builder Pattern"
+                },
+                "builder-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Complex objects constructed step-by-step with method chaining for HtmlElement, CssRule, and Function building."
+                },
+                "polymorphism-pattern": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["poly-title", "poly-desc"]
+                },
+                "poly-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "🎭 Polymorphism"
+                },
+                "poly-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Jackson annotations enable automatic type resolution for different statement and expression types based on JSON structure."
+                },
+                "strategy-pattern": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["strategy-title", "strategy-desc"]
+                },
+                "strategy-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "📋 Strategy Pattern"
+                },
+                "strategy-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Separate conversion strategies for HTML, CSS, and JavaScript enable easy extension for new file types and formats."
+                },
+                "usage-section": {
+                    "tagName": "section",
+                    "attributes": {
+                        "id": "usage",
+                        "class": "doc-section"
+                    },
+                    "children": ["usage-title", "usage-content"]
+                },
+                "usage-title": {
+                    "tagName": "h2",
+                    "attributes": {
+                        "class": "section-title"
+                    },
+                    "children": ["usage-icon", "usage-text"]
+                },
+                "usage-icon": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "section-icon"
+                    },
+                    "children": [],
+                    "content": "🚀"
+                },
+                "usage-text": {
+                    "tagName": "span",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Usage Example"
+                },
+                "usage-content": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "section-content"
+                    },
+                    "children": ["usage-description", "usage-example", "usage-output"]
+                },
+                "usage-description": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "The platform provides a simple Java API for generating code from AST specifications. Create a CodeGenerator instance and call the generate method with your JSON AST file path."
+                },
+                "usage-example": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "code-block"
+                    },
+                    "children": [],
+                    "content": "// Create generator instance\nCodeGenerator generator = new CodeGenerator();\n\n// Generate from JSON AST file\ngenerator.generate(\"path/to/ast.json\");\n\n// Output files created:\n// - HTML: Semantic markup with structure\n// - CSS: Professional styling with animations\n// - JavaScript: Modern ES6+ with event handling"
+                },
+                "usage-output": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "The system generates clean, modern web code with proper separation of concerns, semantic HTML structure, responsive CSS design, and contemporary JavaScript patterns."
+                },
+                "benefits-section": {
+                    "tagName": "section",
+                    "attributes": {
+                        "id": "benefits",
+                        "class": "doc-section"
+                    },
+                    "children": ["benefits-title", "benefits-content"]
+                },
+                "benefits-title": {
+                    "tagName": "h2",
+                    "attributes": {
+                        "class": "section-title"
+                    },
+                    "children": ["benefits-icon", "benefits-text"]
+                },
+                "benefits-icon": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "section-icon"
+                    },
+                    "children": [],
+                    "content": "⭐"
+                },
+                "benefits-text": {
+                    "tagName": "span",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Key Benefits"
+                },
+                "benefits-content": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "section-content"
+                    },
+                    "children": ["benefits-grid"]
+                },
+                "benefits-grid": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-grid"
+                    },
+                    "children": ["benefit-1", "benefit-2", "benefit-3", "benefit-4", "benefit-5", "benefit-6"]
+                },
+                "benefit-1": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["b1-title", "b1-desc"]
+                },
+                "b1-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "🛡️ Type Safety"
+                },
+                "b1-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Strong typing throughout the generation pipeline ensures reliable code generation and compile-time error detection."
+                },
+                "benefit-2": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["b2-title", "b2-desc"]
+                },
+                "b2-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "🔧 Extensibility"
+                },
+                "b2-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Easy to add new statement types, expressions, and file formats through the modular design architecture."
+                },
+                "benefit-3": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["b3-title", "b3-desc"]
+                },
+                "b3-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "📦 Separation of Concerns"
+                },
+                "b3-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Clear distinction between models, conversion logic, and file generation maintains clean code organization."
+                },
+                "benefit-4": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["b4-title", "b4-desc"]
+                },
+                "b4-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "🔄 Maintainability"
+                },
+                "b4-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Well-structured codebase with established design patterns makes maintenance and updates straightforward."
+                },
+                "benefit-5": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["b5-title", "b5-desc"]
+                },
+                "b5-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "⚡ Scalability"
+                },
+                "b5-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Efficiently handles complex, nested structures and large-scale application generation requirements."
+                },
+                "benefit-6": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "feature-card"
+                    },
+                    "children": ["b6-title", "b6-desc"]
+                },
+                "b6-title": {
+                    "tagName": "h3",
+                    "attributes": {
+                        "class": "feature-title"
+                    },
+                    "children": [],
+                    "content": "🌟 Modern Standards"
+                },
+                "b6-desc": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "Generates contemporary web code following current best practices and industry standards."
+                },
+                "footer-section": {
+                    "tagName": "footer",
+                    "attributes": {
+                        "class": "footer"
+                    },
+                    "children": ["footer-content"]
+                },
+                "footer-content": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "container"
+                    },
+                    "children": ["footer-text"]
+                },
+                "footer-text": {
+                    "tagName": "p",
+                    "attributes": {},
+                    "children": [],
+                    "content": "🔮 AST-Based Code Generation Platform - Transforming JSON into Production-Ready Web Applications"
+                }
+            },
+            "cssFiles": ["documentation-styles"],
+            "jsFiles": ["documentation-script"]
+        }
+    },
+    "htmlRootId": "main-container",
+    "outputDirectory": "DocumentationOut"
+}

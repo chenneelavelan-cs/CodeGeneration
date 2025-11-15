@@ -54,3 +54,8 @@ Thumbs.db
 *.zip
 *.tar.gz
 *.rar
+
+# Others
+Output/
+src/main/java/CodeGen/Output
+src/main/java/CodeGen/Output/*

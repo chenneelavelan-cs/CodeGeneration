@@ -1,7 +1,7 @@
 package CodeGen;
 
 public class Environment {
-    public static final String OUTPUT_DIRECTORY = "CodeGen/Output/";
+    public static final String OUTPUT_DIRECTORY = "Output/";
     public static final String HTML_FILE_EXTENSION = "html";
     public static final String CSS_FILE_EXTENSION = "css";
     public static final String JS_FILE_EXTENSION = "js";

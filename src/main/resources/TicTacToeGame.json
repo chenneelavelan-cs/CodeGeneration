@@ -1,0 +1,1018 @@
+{
+    "css": {
+        "tic-tac-toe-styles": {
+            "fileName": "tic-tac-toe-styles",
+            "rules": [
+                {
+                    "selector": "*",
+                    "properties": {
+                        "margin": "0",
+                        "padding": "0",
+                        "box-sizing": "border-box"
+                    }
+                },
+                {
+                    "selector": "body",
+                    "properties": {
+                        "font-family": "'Comic Sans MS', 'Trebuchet MS', cursive",
+                        "background": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                        "min-height": "100vh",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "center",
+                        "color": "#333"
+                    }
+                },
+                {
+                    "selector": ".game-container",
+                    "properties": {
+                        "background": "rgba(255, 255, 255, 0.95)",
+                        "backdrop-filter": "blur(10px)",
+                        "border-radius": "25px",
+                        "padding": "2rem",
+                        "box-shadow": "0 20px 40px rgba(0, 0, 0, 0.1)",
+                        "text-align": "center",
+                        "max-width": "500px",
+                        "width": "100%"
+                    }
+                },
+                {
+                    "selector": ".game-title",
+                    "properties": {
+                        "font-size": "3rem",
+                        "font-weight": "bold",
+                        "margin-bottom": "1rem"
+                    }
+                },
+                {
+                    "selector": ".game-info",
+                    "properties": {
+                        "margin": "1.5rem 0",
+                        "font-size": "1.2rem",
+                        "color": "#555"
+                    }
+                },
+                {
+                    "selector": ".current-player",
+                    "properties": {
+                        "font-weight": "bold",
+                        "color": "#667eea",
+                        "font-size": "1.3rem"
+                    }
+                },
+                {
+                    "selector": ".game-board",
+                    "properties": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(3, 1fr)",
+                        "grid-gap": "10px",
+                        "margin": "2rem auto",
+                        "max-width": "300px",
+                        "background": "#f8f9fa",
+                        "padding": "15px",
+                        "border-radius": "15px",
+                        "box-shadow": "inset 0 5px 15px rgba(0, 0, 0, 0.1)"
+                    }
+                },
+                {
+                    "selector": ".cell",
+                    "properties": {
+                        "width": "80px",
+                        "height": "80px",
+                        "background": "white",
+                        "border": "none",
+                        "border-radius": "10px",
+                        "font-size": "2rem",
+                        "font-weight": "bold",
+                        "cursor": "pointer",
+                        "transition": "all 0.3s ease",
+                        "box-shadow": "0 5px 15px rgba(0, 0, 0, 0.1)",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "center"
+                    }
+                },
+                {
+                    "selector": ".cell:hover",
+                    "properties": {
+                        "transform": "scale(1.05)",
+                        "box-shadow": "0 8px 25px rgba(0, 0, 0, 0.2)",
+                        "background": "#f0f0f0"
+                    }
+                },
+                {
+                    "selector": ".cell.x",
+                    "properties": {
+                        "color": "#ff6b6b",
+                        "background": "#ffe6e6"
+                    }
+                },
+                {
+                    "selector": ".cell.o",
+                    "properties": {
+                        "color": "#4ecdc4",
+                        "background": "#e6fffe"
+                    }
+                },
+                {
+                    "selector": ".cell:disabled",
+                    "properties": {
+                        "cursor": "not-allowed"
+                    }
+                },
+                {
+                    "selector": ".cell.winner",
+                    "properties": {
+                        "background": "#ffd700",
+                        "animation": "pulse 1s infinite"
+                    }
+                },
+                {
+                    "selector": ".game-status",
+                    "properties": {
+                        "font-size": "1.5rem",
+                        "font-weight": "bold",
+                        "margin": "1rem 0",
+                        "min-height": "2rem"
+                    }
+                },
+                {
+                    "selector": ".winner-message",
+                    "properties": {
+                        "color": "#28a745",
+                        "animation": "bounce 0.5s ease-in-out"
+                    }
+                },
+                {
+                    "selector": ".draw-message",
+                    "properties": {
+                        "color": "#ffc107"
+                    }
+                },
+                {
+                    "selector": ".game-controls",
+                    "properties": {
+                        "margin-top": "2rem"
+                    }
+                },
+                {
+                    "selector": ".reset-btn",
+                    "properties": {
+                        "background": "linear-gradient(45deg, #667eea, #764ba2)",
+                        "color": "white",
+                        "border": "none",
+                        "padding": "12px 30px",
+                        "font-size": "1.1rem",
+                        "font-weight": "600",
+                        "border-radius": "25px",
+                        "cursor": "pointer",
+                        "transition": "all 0.3s ease",
+                        "box-shadow": "0 5px 15px rgba(102, 126, 234, 0.3)"
+                    }
+                },
+                {
+                    "selector": ".reset-btn:hover",
+                    "properties": {
+                        "transform": "translateY(-2px)",
+                        "box-shadow": "0 8px 25px rgba(102, 126, 234, 0.4)"
+                    }
+                },
+                {
+                    "selector": ".score-board",
+                    "properties": {
+                        "display": "flex",
+                        "justify-content": "space-around",
+                        "margin": "1rem 0",
+                        "background": "#f8f9fa",
+                        "padding": "1rem",
+                        "border-radius": "15px"
+                    }
+                },
+                {
+                    "selector": ".score-item",
+                    "properties": {
+                        "text-align": "center"
+                    }
+                },
+                {
+                    "selector": ".score-label",
+                    "properties": {
+                        "font-size": "0.9rem",
+                        "color": "#666",
+                        "display": "block"
+                    }
+                },
+                {
+                    "selector": ".score-value",
+                    "properties": {
+                        "font-size": "1.5rem",
+                        "font-weight": "bold",
+                        "color": "#333"
+                    }
+                },
+                {
+                    "selector": "@keyframes gradientShift",
+                    "properties": {
+                        "0%, 100%": "background-position: 0% 50%",
+                        "50%": "background-position: 100% 50%"
+                    }
+                },
+                {
+                    "selector": "@keyframes pulse",
+                    "properties": {
+                        "0%": "transform: scale(1)",
+                        "50%": "transform: scale(1.1)",
+                        "100%": "transform: scale(1)"
+                    }
+                },
+                {
+                    "selector": "@keyframes bounce",
+                    "properties": {
+                        "0%, 20%, 50%, 80%, 100%": "transform: translateY(0)",
+                        "40%": "transform: translateY(-10px)",
+                        "60%": "transform: translateY(-5px)"
+                    }
+                }
+            ]
+        }
+    },
+    "js": {
+        "tic-tac-toe-game": {
+            "fileName": "tic-tac-toe-game",
+            "statements": [
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "let",
+                    "variableName": "currentPlayer",
+                    "value": {
+                        "type": "literal",
+                        "value": "'X'"
+                    }
+                },
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "let",
+                    "variableName": "gameBoard",
+                    "value": {
+                        "type": "literal",
+                        "value": "['', '', '', '', '', '', '', '', '']"
+                    }
+                },
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "let",
+                    "variableName": "gameActive",
+                    "value": {
+                        "type": "literal",
+                        "value": "true"
+                    }
+                },
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "let",
+                    "variableName": "scoreX",
+                    "value": {
+                        "type": "literal",
+                        "value": "0"
+                    }
+                },
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "let",
+                    "variableName": "scoreO",
+                    "value": {
+                        "type": "literal",
+                        "value": "0"
+                    }
+                },
+                {
+                    "type": "variableDeclaration",
+                    "declarationType": "const",
+                    "variableName": "winConditions",
+                    "value": {
+                        "type": "literal",
+                        "value": "[[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]"
+                    }
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "initializeGame",
+                    "parameters": [],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "cells",
+                            "value": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "document"
+                                    },
+                                    "property": "querySelectorAll"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'.cell'"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "cells"
+                                    },
+                                    "property": "forEach"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "(cell, index) => cell.addEventListener('click', () => handleCellClick(index))"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "literal",
+                                    "value": "updateDisplay"
+                                },
+                                "arguments": []
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "handleCellClick",
+                    "parameters": ["index"],
+                    "bodyStatements": [
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "literal",
+                                "value": "if (gameBoard[index] !== '' || !gameActive) return"
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "literal",
+                                    "value": "gameBoard[index]"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "currentPlayer"
+                                }
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "literal",
+                                    "value": "updateDisplay"
+                                },
+                                "arguments": []
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "literal",
+                                    "value": "checkResult"
+                                },
+                                "arguments": []
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "updateDisplay",
+                    "parameters": [],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "cells",
+                            "value": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "document"
+                                    },
+                                    "property": "querySelectorAll"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'.cell'"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "literal",
+                                "value": "cells.forEach((cell, index) => { cell.textContent = gameBoard[index]; cell.className = `cell ${gameBoard[index].toLowerCase()}`; })"
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "functionCall",
+                                        "functionName": {
+                                            "type": "propertyAccess",
+                                            "object": {
+                                                "type": "literal",
+                                                "value": "document"
+                                            },
+                                            "property": "getElementById"
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "literal",
+                                                "value": "'current-player'"
+                                            }
+                                        ]
+                                    },
+                                    "property": "textContent"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "`Player ${currentPlayer}'s Turn`"
+                                }
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "functionCall",
+                                        "functionName": {
+                                            "type": "propertyAccess",
+                                            "object": {
+                                                "type": "literal",
+                                                "value": "document"
+                                            },
+                                            "property": "getElementById"
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "literal",
+                                                "value": "'score-x'"
+                                            }
+                                        ]
+                                    },
+                                    "property": "textContent"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "scoreX"
+                                }
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "functionCall",
+                                        "functionName": {
+                                            "type": "propertyAccess",
+                                            "object": {
+                                                "type": "literal",
+                                                "value": "document"
+                                            },
+                                            "property": "getElementById"
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "literal",
+                                                "value": "'score-o'"
+                                            }
+                                        ]
+                                    },
+                                    "property": "textContent"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "scoreO"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "checkResult",
+                    "parameters": [],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "let",
+                            "variableName": "roundWon",
+                            "value": {
+                                "type": "literal",
+                                "value": "false"
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "literal",
+                                "value": "for (let condition of winConditions) { const [a, b, c] = condition; if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) { roundWon = true; highlightWinningCells([a, b, c]); break; } }"
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "literal",
+                                "value": "if (roundWon) { document.getElementById('game-status').innerHTML = `<div class=\"winner-message\">🎉 Player ${currentPlayer} Wins! 🎉</div>`; gameActive = false; if (currentPlayer === 'X') scoreX++; else scoreO++; updateDisplay(); return; }"
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "literal",
+                                "value": "if (!gameBoard.includes('')) { document.getElementById('game-status').innerHTML = `<div class=\"draw-message\">🤝 It's a Draw! 🤝</div>`; gameActive = false; return; }"
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "literal",
+                                    "value": "currentPlayer"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "currentPlayer === 'X' ? 'O' : 'X'"
+                                }
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "functionCall",
+                                        "functionName": {
+                                            "type": "propertyAccess",
+                                            "object": {
+                                                "type": "literal",
+                                                "value": "document"
+                                            },
+                                            "property": "getElementById"
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "literal",
+                                                "value": "'current-player'"
+                                            }
+                                        ]
+                                    },
+                                    "property": "textContent"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "`Player ${currentPlayer}'s Turn`"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "highlightWinningCells",
+                    "parameters": ["winningIndexes"],
+                    "bodyStatements": [
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "cells",
+                            "value": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "document"
+                                    },
+                                    "property": "querySelectorAll"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'.cell'"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "literal",
+                                "value": "winningIndexes.forEach(index => cells[index].classList.add('winner'))"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "functionDeclaration",
+                    "functionName": "resetGame",
+                    "parameters": [],
+                    "bodyStatements": [
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "literal",
+                                    "value": "currentPlayer"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "'X'"
+                                }
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "literal",
+                                    "value": "gameBoard"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "['', '', '', '', '', '', '', '', '']"
+                                }
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "literal",
+                                    "value": "gameActive"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "true"
+                                }
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "operation",
+                                "leftOperand": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "functionCall",
+                                        "functionName": {
+                                            "type": "propertyAccess",
+                                            "object": {
+                                                "type": "literal",
+                                                "value": "document"
+                                            },
+                                            "property": "getElementById"
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "literal",
+                                                "value": "'game-status'"
+                                            }
+                                        ]
+                                    },
+                                    "property": "innerHTML"
+                                },
+                                "operator": "=",
+                                "rightOperand": {
+                                    "type": "literal",
+                                    "value": "''"
+                                }
+                            }
+                        },
+                        {
+                            "type": "variableDeclaration",
+                            "declarationType": "const",
+                            "variableName": "cells",
+                            "value": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "propertyAccess",
+                                    "object": {
+                                        "type": "literal",
+                                        "value": "document"
+                                    },
+                                    "property": "querySelectorAll"
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "literal",
+                                        "value": "'.cell'"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "literal",
+                                "value": "cells.forEach(cell => cell.classList.remove('winner'))"
+                            }
+                        },
+                        {
+                            "type": "expressionStatement",
+                            "expression": {
+                                "type": "functionCall",
+                                "functionName": {
+                                    "type": "literal",
+                                    "value": "updateDisplay"
+                                },
+                                "arguments": []
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "expressionStatement",
+                    "expression": {
+                        "type": "functionCall",
+                        "functionName": {
+                            "type": "propertyAccess",
+                            "object": {
+                                "type": "literal",
+                                "value": "document"
+                            },
+                            "property": "addEventListener"
+                        },
+                        "arguments": [
+                            {
+                                "type": "literal",
+                                "value": "'DOMContentLoaded'"
+                            },
+                            {
+                                "type": "literal",
+                                "value": "initializeGame"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "html": {
+        "tic-tac-toe-game": {
+            "fileName": "tic-tac-toe-game",
+            "elements": {
+                "game-wrapper": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "game-container"
+                    },
+                    "children": ["game-header", "score-board", "game-info", "game-board", "game-status", "game-controls"]
+                },
+                "game-header": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "game-header"
+                    },
+                    "children": ["game-title"]
+                },
+                "game-title": {
+                    "tagName": "h1",
+                    "attributes": {
+                        "class": "game-title"
+                    },
+                    "children": [],
+                    "content": "🎮 Tic Tac Toe 🎮"
+                },
+                "score-board": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "score-board"
+                    },
+                    "children": ["score-x-item", "score-o-item"]
+                },
+                "score-x-item": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "score-item"
+                    },
+                    "children": ["score-x-label", "score-x-value"]
+                },
+                "score-x-label": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "score-label"
+                    },
+                    "children": [],
+                    "content": "Player X"
+                },
+                "score-x-value": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "score-value",
+                        "id": "score-x"
+                    },
+                    "children": [],
+                    "content": "0"
+                },
+                "score-o-item": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "score-item"
+                    },
+                    "children": ["score-o-label", "score-o-value"]
+                },
+                "score-o-label": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "score-label"
+                    },
+                    "children": [],
+                    "content": "Player O"
+                },
+                "score-o-value": {
+                    "tagName": "span",
+                    "attributes": {
+                        "class": "score-value",
+                        "id": "score-o"
+                    },
+                    "children": [],
+                    "content": "0"
+                },
+                "game-info": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "game-info"
+                    },
+                    "children": ["current-player-display"]
+                },
+                "current-player-display": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "current-player",
+                        "id": "current-player"
+                    },
+                    "children": [],
+                    "content": "Player X's Turn"
+                },
+                "game-board": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "game-board"
+                    },
+                    "children": ["cell-0", "cell-1", "cell-2", "cell-3", "cell-4", "cell-5", "cell-6", "cell-7", "cell-8"]
+                },
+                "cell-0": {
+                    "tagName": "button",
+                    "attributes": {
+                        "class": "cell",
+                        "data-index": "0"
+                    },
+                    "children": []
+                },
+                "cell-1": {
+                    "tagName": "button",
+                    "attributes": {
+                        "class": "cell",
+                        "data-index": "1"
+                    },
+                    "children": []
+                },
+                "cell-2": {
+                    "tagName": "button",
+                    "attributes": {
+                        "class": "cell",
+                        "data-index": "2"
+                    },
+                    "children": []
+                },
+                "cell-3": {
+                    "tagName": "button",
+                    "attributes": {
+                        "class": "cell",
+                        "data-index": "3"
+                    },
+                    "children": []
+                },
+                "cell-4": {
+                    "tagName": "button",
+                    "attributes": {
+                        "class": "cell",
+                        "data-index": "4"
+                    },
+                    "children": []
+                },
+                "cell-5": {
+                    "tagName": "button",
+                    "attributes": {
+                        "class": "cell",
+                        "data-index": "5"
+                    },
+                    "children": []
+                },
+                "cell-6": {
+                    "tagName": "button",
+                    "attributes": {
+                        "class": "cell",
+                        "data-index": "6"
+                    },
+                    "children": []
+                },
+                "cell-7": {
+                    "tagName": "button",
+                    "attributes": {
+                        "class": "cell",
+                        "data-index": "7"
+                    },
+                    "children": []
+                },
+                "cell-8": {
+                    "tagName": "button",
+                    "attributes": {
+                        "class": "cell",
+                        "data-index": "8"
+                    },
+                    "children": []
+                },
+                "game-status": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "game-status",
+                        "id": "game-status"
+                    },
+                    "children": []
+                },
+                "game-controls": {
+                    "tagName": "div",
+                    "attributes": {
+                        "class": "game-controls"
+                    },
+                    "children": ["reset-button"]
+                },
+                "reset-button": {
+                    "tagName": "button",
+                    "attributes": {
+                        "class": "reset-btn",
+                        "onclick": "resetGame()"
+                    },
+                    "children": [],
+                    "content": "🔄 New Game"
+                }
+            },
+            "cssFiles": ["tic-tac-toe-styles"],
+            "jsFiles": ["tic-tac-toe-game"]
+        }
+    },
+    "htmlRootId": "game-wrapper",
+    "outputDirectory": "TicTacToeGame"
+}

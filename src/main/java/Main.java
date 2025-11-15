@@ -1,19 +1,4 @@
-import CodeGen.Common.FileCreator;
-import CodeGen.Css.CssFile;
-import CodeGen.Css.CssRule;
-import CodeGen.Html.HtmlElement;
-import CodeGen.Html.HtmlFile;
-import CodeGen.Js.Expression;
-import CodeGen.Js.ExpressionStatement;
-import CodeGen.Js.Function;
-import CodeGen.Js.FunctionCallExpression;
-import CodeGen.Js.LiteralExpression;
-import CodeGen.Js.OperationExpression;
-import CodeGen.Js.Parameter;
-import CodeGen.Js.PropertyAccessExpression;
-import CodeGen.Js.ScriptFile;
-import CodeGen.Js.Variable;
-
+import CodeGen.Engine.CodeGenerator;
 public class Main {
     
     public static void main(String[] args) {
@@ -274,145 +259,126 @@ public class Main {
         // but its his responsibility to provide the correct file right
 
 
-       
-        Expression getButtonExpr = new FunctionCallExpression(
-            new PropertyAccessExpression(
-                new LiteralExpression("document"),
-                "getElementById"
-            ),
-            new LiteralExpression("\"myButton\"")
-        );
+        // INPUT FLOW:
 
-        // const buttonEl = document.getElementById("myButton");
-        Variable buttonEl = new Variable("const", "buttonEl", getButtonExpr);
+        // CodeGenAST
+        // CodeGenerator codeGenerator = new CodeGenerator();
+        // codeGenerator will take the file path of the json ast as input
+        // the json will be of design CodeGenAST
 
-        // let clickCount = 0;
-        Variable clickCountVar = new Variable("let", "clickCount", new LiteralExpression("0"));
-
-        OperationExpression buttonInitialTextContentValue = new OperationExpression( // buttonEl.innerText = `Clicked ${clickCount} times`;
-            new LiteralExpression("buttonEl").dot("innerText"),
-            "=",
-            new LiteralExpression("`Clicked ${clickCount} times`")
-        );
-
-        // function buttonClick(e) { console.log("clicked on button: ", e); }
-        Function buttonClick = new Function("buttonClick")
-            .addParameter(new Parameter("e", null))
-            .addBodyStatement(new ExpressionStatement( // clickCount += 1;
-                new OperationExpression(
-                    new LiteralExpression("clickCount"), 
-                    "+=", 
-                    new LiteralExpression("1")
-                )
-            ))
-            .addBodyStatement(new ExpressionStatement( // console.log("clicked on button: ", e);
-                new FunctionCallExpression(
-                    new LiteralExpression("console").dot("log"),
-                    new LiteralExpression("\"clicked on button: \""),
-                    new LiteralExpression("e")
-                )
-            ))
-            .addBodyStatement(new ExpressionStatement( // console.log("Click count: ", clickCount);
-                new FunctionCallExpression(
-                    new LiteralExpression("console").dot("log"),
-                    new LiteralExpression("\"Click count: \""),
-                    new LiteralExpression("clickCount")
-                )
-            ))
-            .addBodyStatement(new ExpressionStatement( // buttonEl.innerText = `Clicked ${clickCount} times`;
-                new OperationExpression(
-                    new LiteralExpression("buttonEl").dot("innerText"),
-                    "=",
-                    new LiteralExpression("`Clicked ${clickCount} times`")
-                )
-            ));
-
-        // buttonEl.addEventListener("click", buttonClick);
-        Expression addListenerExpr = new FunctionCallExpression(
-            new LiteralExpression("buttonEl").dot("addEventListener"),
-            new LiteralExpression("\"click\""),
-            new LiteralExpression("buttonClick")
-        );
-
-        ExpressionStatement eventBinding = new ExpressionStatement(addListenerExpr);
-
-        ScriptFile scriptFile = new ScriptFile("script")
-            .addStatement(buttonEl)
-            .addStatement(clickCountVar)
-            .addStatement(buttonInitialTextContentValue)
-            .addStatement(buttonClick)
-            .addStatement(eventBinding);
-
-        boolean isScriptFileCreationSuccessful = FileCreator.createFile(scriptFile);
-        if (isScriptFileCreationSuccessful) {
-            System.out.println(scriptFile.getFileName() + " File Created Successfully");
-        }
-        else {
-            System.out.println(scriptFile.getFileName() + " File Creation failed");
-        }
-
-        System.out.println("\n Generated JS File Content:\n");
-        System.out.println(scriptFile.getFileContent());
-
-        CssRule myClass = new CssRule(".my-div")
-                        .addProperty("border", "1px solid black")
-                        .addProperty("padding", "12px")
-                        .addProperty("font-size", "20px")
-                        .addProperty("display", "flex")
-                        .addProperty("flex-direction", "column")
-                        .addProperty("gap", "12px");
-
-        CssRule myButton = new CssRule(".my-button")
-                        .addProperty("background-color", "#4CAF50")
-                        .addProperty("color", "white")
-                        .addProperty("padding", "10px 20px")
-                        .addProperty("border", "none")
-                        .addProperty("border-radius", "4px")
-                        .addProperty("cursor", "pointer");
-
-        CssRule hoverEffect = new CssRule(".my-button:hover")
-                        .addProperty("background-color", "#45a049");
+        // reading from the file path, codeGenerator will parse the json into CodeGenAST object 
+        // using object mapper from jackson library
         
-        CssFile cssFile = new CssFile("styles")
-                        .addRule(myClass)
-                        .addRule(myButton)
-                        .addRule(hoverEffect);
+        // each model in the AST has its own class in the CodeGen.Model package
 
-        String cssOut = cssFile.getFileContent();
-        System.out.println("\n Generated CSS File Content:\n");
-        System.out.println(cssOut);
+        // after deserializing into CodeGenAST object
+        // codeGenerator will go through each file object in the AST and create respective factory classes to create file objects
+        // CssFileFactory, JsFileFactory, HtmlFileFactory.
 
-        boolean isCssFileCreationSuccessfull = FileCreator.createFile(cssFile);
-        if (isCssFileCreationSuccessfull) {
-            System.out.println(cssFile.getFileName() + " File Created Successfully");
+        // finally, codeGenerator will use FileCreator to create the files on disk.
+
+
+        // CodeGenAST will have these properties
+        // List<HtmlModelData> htmlFiles
+        // List<CssModelData> cssFiles
+        // List<JsModelData> jsFiles
+
+        // HtmlModelData will have properties like fileName, title, rootElementId, elements Map<String, HtmlElementData>
+        // CssModelData will have properties like fileName, rules (list of CssRuleData)
+        // JsModelData will have properties like fileName, statements (list of JsStatementData
+
+        // HtmlModelData will have HtmlElementData which will represent each html element
+        // CssModelData will have CssRuleData which will represent each css rule
+        // JsModelData will have JsStatementData which will represent each js statement
+
+        // JsStatementData will be abstract class with subclasses VariableDeclarationData, FunctionDeclarationData, ExpressionStatementData
+        // JsStatementData has different types, so we need to use polymorphism here.
+        // using jackson annotations to achieve polymorphic deserialization
+
+        // JsStatementData for now can have only these 4 types
+        // - VariableDeclarationData
+        // - FunctionDeclarationData
+        // - ExpressionStatementData
+        // - ExpressionData
+
+        // ExpressionData can be of different types too
+        // - LiteralExpressionData
+        // - OperationExpressionData
+        // - FunctionCallExpressionData
+        // - PropertyAccessExpressionData
+
+        // using similar approach for ExpressionData as well using jackson annotations
+
+        // Design Patterns Used:
+        // - Factory Pattern for creating file objects from model data
+        // - Builder Pattern for building HtmlElement, CssRule, JsStatement objects
+        // - Polymorphism for JsStatementData and ExpressionData using jackson annotations
+        // - Strategy Pattern for FileObject creations.
+
+        // Data Structures Used:
+        // - Maps for storing elements and attributes
+        // - Lists for storing children elements, rules, statements
+        // - Classes and Objects for representing different file types and their components
+        // - Trees for representing hierarchical structure of HTML elements
+        
+        // Algorithms Used:
+        // - Recursive algorithms for converting nested HTML elements from model data to HtmlElement objects
+        // - Iterative algorithms for processing lists of CSS rules and JS statements
+        // - Simple parsing algorithms for interpreting JSON input into model data objects
+
+        // technologies Used:
+        // - Jackson library for JSON parsing and polymorphic deserialization
+
+
+        // // Test the MASSIVE AST file
+        // System.out.println("\n=== Testing MASSIVE AST-based Code Generator ===");
+        // try {
+        //     CodeGenerator massiveCodeGenerator = new CodeGenerator();
+        //     massiveCodeGenerator.generate("src/main/resources/MassiveAST.json");
+        // } catch (Exception e) {
+        //     System.out.println("Error generating code from Massive AST: " + e.getMessage());
+        //     e.printStackTrace();
+        // }
+
+        // // Test the Colorful Fun Page
+        // System.out.println("\n=== Testing COLORFUL FUN PAGE Code Generator ===");
+        // try {
+        //     CodeGenerator colorfulPageGenerator = new CodeGenerator();
+        //     colorfulPageGenerator.generate("src/main/resources/ColorfulFunPage.json");
+        // } catch (Exception e) {
+        //     System.out.println("Error generating code from Colorful Fun Page AST: " + e.getMessage());
+        //     e.printStackTrace();
+        // }
+        
+    
+        // Test the new AST-based code generator
+        System.out.println("\n=== Testing AST-based Code Generator ===");
+        try {
+            CodeGenerator codeGenerator = new CodeGenerator();
+            codeGenerator.generate("src/main/resources/SampleAST.json");
+        } catch (Exception e) {
+            System.out.println("Error generating code from AST: " + e.getMessage());
+            e.printStackTrace();
         }
-        else {
-            System.out.println(cssFile.getFileName() + " File Creation failed");
+
+        // Test the Documentation Page
+        System.out.println("\n=== Testing DOCUMENTATION PAGE Code Generator ===");
+        try {
+            CodeGenerator docPageGenerator = new CodeGenerator();
+            docPageGenerator.generate("src/main/resources/DocumentationPage.json");
+        } catch (Exception e) {
+            System.out.println("Error generating code from Documentation Page AST: " + e.getMessage());
+            e.printStackTrace();
         }
 
-        HtmlElement myDiv = new HtmlElement("div")
-                        .addAttribute("class", "my-div")
-                        .addChildren(new HtmlElement("p")
-                            .setTextContent("Hello New World"))
-                        .addChildren(new HtmlElement("button").
-                            setTextContent("Click Me")
-                            .addAttribute("class", "my-button")
-                            .addAttribute("id", "myButton"));
-
-        HtmlFile htmlFile = new HtmlFile("index", "My Generated HTML")
-                        .addElement(myDiv)
-                        .linkCssFile(cssFile)
-                        .linkScriptFile(scriptFile);
-
-        System.out.println("\n Generated HTML File Content:\n");
-        System.out.println(htmlFile.getFileContent());
-
-        boolean isFileCreationSuccessfull = FileCreator.createFile(htmlFile);
-        if (isFileCreationSuccessfull) {
-            System.out.println(htmlFile.getFileName() + " File Created Successfully");
-        }
-        else {
-            System.out.println(htmlFile.getFileName() + " File Creation failed");
+        // Test the Tic Tac Toe Game
+        System.out.println("\n=== Testing TIC TAC TOE GAME Code Generator ===");
+        try {
+            CodeGenerator ticTacToeGenerator = new CodeGenerator();
+            ticTacToeGenerator.generate("src/main/resources/TicTacToeGame.json");
+        } catch (Exception e) {
+            System.out.println("Error generating code from Tic Tac Toe Game AST: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }
