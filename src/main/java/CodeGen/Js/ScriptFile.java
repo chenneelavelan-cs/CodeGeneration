@@ -34,7 +34,7 @@ public class ScriptFile extends CodeGenFile {
         StringBuilder sb = new StringBuilder();
         for (JsRenderable statement : statements) {
             sb.append(statement.renderJsContent(0)).append("\n");
-            if (statement != statements.get(statements.size() - 1)) { // add new line between statements
+            if (statement != statements.getLast()) { // add new line between statements
                 sb.append("\n");
             }
         }
